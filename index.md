@@ -17,8 +17,8 @@ in a declarative or a programmatic way.
 To enable the JCache add-on in your application, use the following dependency snippet:
 
     <dependency>
-        <groupId>org.seedstack</groupId>
-        <artifactId>seed-jcache</artifactId>
+        <groupId>org.seedstack.addons</groupId>
+        <artifactId>jcache</artifactId>
     </dependency>
 
 JCache specification jar dependency is required as well:
