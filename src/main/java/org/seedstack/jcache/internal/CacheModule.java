@@ -5,11 +5,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
-package org.seedstack.seed.cache.internal;
+package org.seedstack.jcache.internal;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
-import org.seedstack.seed.cache.spi.CacheConcern;
 import org.jsr107.ri.annotations.guice.module.CacheAnnotationsModule;
 
 import javax.cache.Cache;

@@ -26,9 +26,7 @@
         <seed.version>2.1.0-M1-SNAPSHOT</seed.version>
         <jcache.version>1.0.0</jcache.version>
 
-        <compatibility.groupId>org.seedstack.seed</compatibility.groupId>
-        <compatibility.artifactId>seed-cache-support</compatibility.artifactId>
-        <compatibility.version>2.0.0</compatibility.version>
+        <compatibility.skip>true</compatibility.skip>
     </properties>
 
     <build>

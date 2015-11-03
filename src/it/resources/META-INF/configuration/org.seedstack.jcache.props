@@ -6,8 +6,8 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #
 
-[org.seedstack.seed.cache]
+[org.seedstack.jcache]
 default-provider = org.jsr107.ri.spi.RICachingProvider
 caches = testcache1, testcache2
-cache.testcache1.expiry-policy-factory = org.seedstack.seed.cache.SampleExpiryPolicyFactory
+cache.testcache1.expiry-policy-factory = org.seedstack.jcache.SampleExpiryPolicyFactory
 cache.testcache1.provider = org.jsr107.ri.spi.RICachingProvider

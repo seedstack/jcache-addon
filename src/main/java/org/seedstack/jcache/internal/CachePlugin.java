@@ -5,7 +5,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
-package org.seedstack.seed.cache.internal;
+package org.seedstack.jcache.internal;
 
 import org.seedstack.seed.core.internal.application.ApplicationPlugin;
 import io.nuun.kernel.api.Plugin;
@@ -29,20 +29,20 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
- * This plugin provides JSR-107 cache integration.
+ * This plugin provides JSR-107 jcache integration.
  *
  * @author emmanuel.vinel@mpsa.com
  * @author adrien.lauer@mpsa.com
  */
 public class CachePlugin extends AbstractPlugin {
-    public static final String CACHE_PLUGIN_CONFIGURATION_PREFIX = "org.seedstack.seed.cache";
+    public static final String CACHE_PLUGIN_CONFIGURATION_PREFIX = "org.seedstack.jcache";
     private static final Logger LOGGER = LoggerFactory.getLogger(CachePlugin.class);
 
     private final Map<String, Cache> caches = new HashMap<String, Cache>();
 
     @Override
     public String name() {
-        return "seed-cache-plugin";
+        return "jcache";
     }
 
     @Override
@@ -86,10 +86,10 @@ public class CachePlugin extends AbstractPlugin {
 
                 String providerClassname = cacheConf.getString("provider", defaultProvider);
                 if (providerClassname == null) {
-                    LOGGER.info("Configuring cache {} with autodetected provider", cacheName);
+                    LOGGER.info("Configuring jcache {} with autodetected provider", cacheName);
                     caches.put(cacheName, Caching.getCachingProvider().getCacheManager().createCache(cacheName, cacheConfiguration));
                 } else {
-                    LOGGER.info("Configuring cache {} with provider {}", cacheName, providerClassname);
+                    LOGGER.info("Configuring jcache {} with provider {}", cacheName, providerClassname);
                     caches.put(cacheName, Caching.getCachingProvider(providerClassname).getCacheManager().createCache(cacheName, cacheConfiguration));
                 }
             }
