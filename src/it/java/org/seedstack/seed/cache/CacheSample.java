@@ -7,7 +7,7 @@
  */
 package org.seedstack.seed.cache;
 
-import org.seedstack.seed.it.api.ITBind;
+import org.seedstack.seed.it.ITBind;
 
 import javax.cache.Cache;
 import javax.cache.annotation.CacheResult;
