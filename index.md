@@ -14,7 +14,7 @@ in a declarative or a programmatic way.
 
 **Implementations are not provided by this add-on and must be configured depending on your caching solution**.
 
-{{< dependency "org.seedstack.addons.jcache" "jcache" >}}
+{{< dependency g="org.seedstack.addons.jcache" a="jcache" >}}
 
 JCache specification jar dependency is required as well:
 
