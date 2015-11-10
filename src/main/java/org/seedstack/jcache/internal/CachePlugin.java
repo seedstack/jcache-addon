@@ -7,13 +7,13 @@
  */
 package org.seedstack.jcache.internal;
 
-import org.seedstack.seed.core.internal.application.ApplicationPlugin;
-import io.nuun.kernel.api.Plugin;
+import com.google.common.collect.Lists;
 import io.nuun.kernel.api.plugin.InitState;
 import io.nuun.kernel.api.plugin.PluginException;
 import io.nuun.kernel.api.plugin.context.InitContext;
 import io.nuun.kernel.core.AbstractPlugin;
 import org.apache.commons.configuration.Configuration;
+import org.seedstack.seed.core.spi.configuration.ConfigurationProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,7 +22,6 @@ import javax.cache.Caching;
 import javax.cache.configuration.Factory;
 import javax.cache.configuration.MutableConfiguration;
 import javax.cache.expiry.Duration;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -48,8 +47,8 @@ public class CachePlugin extends AbstractPlugin {
     @Override
     @SuppressWarnings("unchecked")
     public InitState init(InitContext initContext) {
-        ApplicationPlugin confPlugin = (ApplicationPlugin) initContext.pluginsRequired().iterator().next();
-        Configuration cachesConf = confPlugin.getApplication().getConfiguration().subset(CachePlugin.CACHE_PLUGIN_CONFIGURATION_PREFIX);
+        Configuration cachesConf = initContext.dependency(ConfigurationProvider.class)
+                .getConfiguration().subset(CachePlugin.CACHE_PLUGIN_CONFIGURATION_PREFIX);
 
         String defaultProvider = cachesConf.getString("default-provider");
         String[] cacheNames = cachesConf.getStringArray("caches");
@@ -105,10 +104,8 @@ public class CachePlugin extends AbstractPlugin {
     }
 
     @Override
-    public Collection<Class<? extends Plugin>> requiredPlugins() {
-        Collection<Class<? extends Plugin>> plugins = new ArrayList<Class<? extends Plugin>>();
-        plugins.add(ApplicationPlugin.class);
-        return plugins;
+    public Collection<Class<?>> requiredPlugins() {
+        return Lists.<Class<?>>newArrayList(ConfigurationProvider.class);
     }
 
     @Override
