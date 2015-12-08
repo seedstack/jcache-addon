@@ -1,6 +1,6 @@
 # SeedStack JCache add-on
 
-[![Build status](https://travis-ci.org/seedstack/jcache-addon.svg?branch=master)](https://travis-ci.org/seedstack/jcache-addon) [![Coverage Status](https://coveralls.io/repos/seedstack/jcache-addon/badge.svg?branch=master)](https://coveralls.io/r/seedstack/jcache-addon?branch=master) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.seedstackorg.seedstack.addons.jcache/jcache/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/org.seedstack.addons.jcache/jcache)
+[![Build status](https://travis-ci.org/seedstack/jcache-addon.svg?branch=master)](https://travis-ci.org/seedstack/jcache-addon) [![Coverage Status](https://coveralls.io/repos/seedstack/jcache-addon/badge.svg?branch=master)](https://coveralls.io/r/seedstack/jcache-addon?branch=master) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.seedstack.addons.jcache/jcache/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/org.seedstack.addons.jcache/jcache)
 
 JCache (JSR 107) official integration for SeedStack.
 
