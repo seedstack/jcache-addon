@@ -1,10 +1,15 @@
 ---
-title: "Overview"
-addon: "JCache"
+title: "Basics"
+name: "JCache"
 repo: "https://github.com/seedstack/jcache-addon"
 author: "SeedStack"
 min-version: "15.11+"
 backend: true
+weight: -1
+tags:
+    - "cache"
+zones:
+    - Addons
 menu:
     JCacheAddon:
         weight: 10
