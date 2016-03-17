@@ -27,6 +27,8 @@
         <jcache.version>1.0.0</jcache.version>
 
         <compatibility.version>2.1.0</compatibility.version>
+
+        <bintray.package>jcache-addon</bintray.package>
     </properties>
 
     <build>
