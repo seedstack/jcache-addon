@@ -41,6 +41,7 @@
                         <includedLicenses>
                             <includedLicense>Apache 2</includedLicense>
                             <includedLicense>BSD</includedLicense>
+                            <includedLicense>CDDL</includedLicense>
                             <includedLicense>MIT License</includedLicense>
                             <includedLicense>LGPL 2.1</includedLicense>
                             <includedLicense>LGPL 3.0</includedLicense>
@@ -56,6 +57,7 @@
                             <licenseMerge>Apache 2|The Apache Software License, Version 2.0</licenseMerge>
                             <licenseMerge>Apache 2|Apache License 2.0</licenseMerge>
                             <licenseMerge>BSD|The New BSD License</licenseMerge>
+                            <licenseMerge>CDDL|CDDL + GPLv2 with classpath exception</licenseMerge>
                             <licenseMerge>LGPL 3.0|GNU Lesser Public License</licenseMerge>
                             <licenseMerge>IGNORED_LICENSE|MPL 1.1</licenseMerge>
                         </licenseMerges>
