@@ -15,8 +15,6 @@ import java.lang.annotation.RetentionPolicy;
 
 /**
  * Nuun concern for ordering jcache operations.
- *
- * @author adrien.lauer@mpsa.com
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Concern(name="jcache-concern", priority= Concern.Priority.HIGH)

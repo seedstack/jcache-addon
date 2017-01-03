@@ -1,3 +1,7 @@
+# Version 3.0.0 (2017-01-03)
+
+* [brk] Update for new configuration system. 
+
 # Version 2.1.1 (2016-04-26)
 
 * [chg] Update for SeedStack 16.4
