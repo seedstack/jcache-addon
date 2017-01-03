@@ -17,12 +17,12 @@ import javax.cache.expiry.EternalExpiryPolicy;
 import javax.cache.expiry.ModifiedExpiryPolicy;
 import javax.cache.expiry.TouchedExpiryPolicy;
 import javax.cache.spi.CachingProvider;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 @Config("jcache")
 public class JCacheConfig {
-
     private Class<? extends CachingProvider> defaultProvider;
     private Map<String, CacheConfig> caches = new HashMap<>();
 
@@ -36,7 +36,7 @@ public class JCacheConfig {
     }
 
     public Map<String, CacheConfig> getCaches() {
-        return caches;
+        return Collections.unmodifiableMap(caches);
     }
 
     public JCacheConfig addCache(String name, CacheConfig config) {
