@@ -1,12 +1,8 @@
 ---
-title: "Basics"
-name: "JCache"
+Title: "JCache"
 repo: "https://github.com/seedstack/jcache-addon"
 description: "Integration of the JCache standard which provides easy-to-use applicative caching."
-date: 2015-11-17
 author: Emmanuel VINEL
-backend: true
-weight: -1
 tags:
     - "cache"
 zones:
