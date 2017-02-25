@@ -37,19 +37,19 @@ jcache:
   caches:
     cache1:
       # The JCache provider to use (fallback to global default if not specified)
-      provider: Class<? extends CachingProvider>
+      provider: (Class<? extends CachingProvider>)
       
       # The built-in expiry policy to use 
       expiryPolicy: (TOUCHED|ACCESSED|CREATED|MODIFIED|ETERNAL)
       
       # Expiry duration in seconds for built-in expiry policies (defaults to 900)
-      expiryDuration: 900
+      expiryDuration: (int)
       
       # The factory of the custom expiry policy to use instead of the built-in expiry policy 
-      expiryPolicyFactory: Class<? extends Factory<? extends javax.cache.expiry.ExpiryPolicy>>
+      expiryPolicyFactory: (Class<? extends Factory<? extends javax.cache.expiry.ExpiryPolicy>>)
     
   # The default JCache provider to use if not specified on a cache (auto-detected if not specified at all)
-  defaultProvider: Class<? extends CachingProvider> 
+  defaultProvider: (Class<? extends CachingProvider>) 
 ```
 {{% /config %}}    
 
