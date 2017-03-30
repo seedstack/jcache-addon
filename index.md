@@ -3,8 +3,6 @@ Title: "JCache"
 repo: "https://github.com/seedstack/jcache-addon"
 description: "Integration of the JCache standard which provides easy-to-use applicative caching."
 author: Emmanuel VINEL
-tags:
-    - "cache"
 zones:
     - Addons
 menu:
