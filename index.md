@@ -1,19 +1,18 @@
 ---
 Title: "JCache"
+addon: "JCache"
 repo: "https://github.com/seedstack/jcache-addon"
 description: "Integration of the JCache standard which provides easy-to-use applicative caching."
 author: Emmanuel VINEL
 zones:
     - Addons
-menu:
-    JCacheAddon:
-        weight: 10
+noMenu: true    
 ---
 
 The JCache add-on integrates the JCache API (a.k.a. JSR 107) which allows to interact with compliant caching providers
 in a declarative or a programmatic way.<!--more-->
 
-# Dependencies
+## Dependencies
 
 The add-on dependency is:
 
@@ -24,7 +23,7 @@ An JCache-compliant implementation is also required, such as the popular [EhCach
 {{< dependency g="org.ehcache" a="ehcache" >}}
 
 
-# Configuration
+## Configuration
 
 Configuration is done by declaring one or more caches:
 
@@ -51,12 +50,12 @@ jcache:
 ```
 {{% /config %}}    
 
-# Declarative usage
+## Declarative usage
 
 The declarative API is annotation-based and can be used on methods. When the method will be invoked, the corresponding
 cache operation will take place.
 
-## Cache a return value
+### Cache a return value
 
 The following code caches the return value of the method, using its arguments as a key:
 
@@ -100,7 +99,7 @@ Finally, {{< java "javax.cache.annotation.CacheResult" "@" >}} has a skipGet att
 of the cache. This is useful for create or update methods that should always be executed and have their returned value 
 placed in the cache.
 
-## Put a value
+### Put a value
 
 The following code add `updatedThing` to the `things` cache with the `scope` and `name` arguments as the key:
 
@@ -122,7 +121,7 @@ exception matches the filter specified on the annotation.
 Finally, it is possible to control if the cache is updated before or after the invocation of the annotated method. Of 
 course, if it is updated before, no exception handling takes place.
 
-## Remove a value
+### Remove a value
 
 The {{< java "javax.cache.annotation.CacheRemove" "@" >}} annotation removes the entry with the `scope` and `name` 
 arguments as the key from the `things` cache:
@@ -139,7 +138,7 @@ public class SomeClass {
 This annotation has a special exception handling to prevent the eviction if the annotated method throws an exception that 
 matches the filter specified on the annotation.
 
-## Remove all values
+### Remove all values
 
 The {{< java "javax.cache.annotation.CacheRemoveAll" "@" >}} annotation removes all entries from the `things` cache:
 
@@ -152,7 +151,7 @@ public class SomeClass {
 }
 ```
 
-## Cache defaults
+### Cache defaults
 
 {{< java "javax.cache.annotation.CacheDefaults" "@" >}} is a class-level annotation that allows you to share common 
 settings on any caching operation defined on the class. These are:
@@ -161,7 +160,7 @@ settings on any caching operation defined on the class. These are:
 * The custom CacheResolverFactory
 * The custom CacheKeyGenerator
     
-# Programmatic usage
+## Programmatic usage
 
 If you need a more fine-grained control of your caches, you can also use the programmatic API. You just need to inject
 the needed `Cache` object(s):
